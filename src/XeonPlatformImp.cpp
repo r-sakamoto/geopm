@@ -184,6 +184,34 @@ namespace geopm
 
     }
 
+    int SKXPlatformImp::platform_id(void)
+    {
+        return 0x655;
+    }
+
+    SKXPlatformImp::SKXPlatformImp()
+        : XeonPlatformImp(platform_id(), "Skylake E", &(hsx_msr_map()))
+    {
+        XeonPlatformImp::m_dram_energy_units = 1.5258789063E-5;
+    }
+
+    SKXPlatformImp::SKXPlatformImp(int platform_id, const std::string &model_name)
+        : XeonPlatformImp(platform_id, model_name, &(hsx_msr_map()))
+    {
+        XeonPlatformImp::m_dram_energy_units = 1.5258789063E-5;
+    }
+
+    SKXPlatformImp::SKXPlatformImp(const SKXPlatformImp &other)
+        : XeonPlatformImp(other)
+    {
+
+    }
+
+    SKXPlatformImp::~SKXPlatformImp()
+    {
+
+    }
+
     int BDXPlatformImp::platform_id(void)
     {
         return 0x64F;

@@ -84,6 +84,7 @@ namespace geopm
             const int M_IVT_ID;
             const int M_SNB_ID;
             const int M_BDX_ID;
+            const int M_SKX_ID;
             const int M_KNL_ID;
     };
 }

@@ -192,6 +192,21 @@ namespace geopm
             static int platform_id(void);
     };
 
+    /// @brief This class provides a concrete platform implementation of
+    /// Haswell E processors: cpuid=0x655.
+    class SKXPlatformImp : public XeonPlatformImp
+    {
+        public:
+            /// @brief Default constructor.
+            SKXPlatformImp();
+            SKXPlatformImp(const SKXPlatformImp &other);
+            SKXPlatformImp(int platform_id, const std::string &model_name);
+            /// @brief Default destructor.
+            virtual ~SKXPlatformImp();
+            static int platform_id(void);
+    };
+
+
     class BDXPlatformImp : public HSXPlatformImp
     {
         public:

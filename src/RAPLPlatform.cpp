@@ -47,6 +47,7 @@ namespace geopm
         , M_IVT_ID(0x63E)
         , M_SNB_ID(0x62D)
         , M_BDX_ID(0x64F)
+        , M_SKX_ID(0x655)
         , M_KNL_ID(0x657)
     {
 
@@ -62,6 +63,7 @@ namespace geopm
         return ((platform_id == M_IVT_ID ||
                  platform_id == M_SNB_ID ||
                  platform_id == M_BDX_ID ||
+                 platform_id == M_SKX_ID ||
                  platform_id == M_KNL_ID ||
                  platform_id == M_HSX_ID) &&
                 description == m_description);

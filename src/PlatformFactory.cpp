@@ -94,6 +94,7 @@ namespace geopm
         register_platform(std::unique_ptr<PlatformImp>(new IVTPlatformImp()));
         register_platform(std::unique_ptr<PlatformImp>(new HSXPlatformImp()));
         register_platform(std::unique_ptr<PlatformImp>(new BDXPlatformImp()));
+        register_platform(std::unique_ptr<PlatformImp>(new SKXPlatformImp()));
         register_platform(std::unique_ptr<PlatformImp>(new KNLPlatformImp()));
     }
 
